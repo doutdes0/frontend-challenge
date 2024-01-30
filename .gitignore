@@ -2,6 +2,7 @@
 node_modules/
 *.tsbuildinfo
 dist
+.env
 
 .vscode/*
 !.vscode/extensions.json
