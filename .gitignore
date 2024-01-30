@@ -1,4 +1,13 @@
 .idea
 node_modules/
 *.tsbuildinfo
+dist
 
+.vscode/*
+!.vscode/extensions.json
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
