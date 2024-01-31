@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom";
 import NavBar from "./components/Navbar";
 import styled from "styled-components";
 
-const App = () => {
+const App: React.FC = () => {
   return (
     <Container>
       <NavBar />

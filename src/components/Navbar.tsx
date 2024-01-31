@@ -46,6 +46,7 @@ const Container = styled.div`
   justify-content: start;
   background-color: var(--nav-blue);
   padding-left: 62px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.24);
   .link {
     display: flex;
     align-items: center;
