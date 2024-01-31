@@ -1,0 +1,34 @@
+@import url("./normalize.css");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
+
+:root {
+  --ss-family: "Roboto", Helvetica, sans-serif;
+  --black: hsl(225deg 9.52% 8.24%);
+  --white: hsl(0, 0%, 97%);
+  --nav-blue: hsl(207, 90%, 54%);
+  --nav-blue_picked: hsl(208, 79%, 51%);
+  --btn_inactive: hsl(14, 89%, 53%);
+  --btn-active: hsl(14, 100%, 50%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+button,
+input {
+  font-family: var(--ss-family);
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  letter-spacing: 0.25px;
+}
+
+/* @media only screen and (max-width: 768px) {
+  body {
+    overflow: initial;
+    overflow-y: auto;
+    max-height: none;
+  }
+} */

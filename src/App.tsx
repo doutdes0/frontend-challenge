@@ -1,14 +1,21 @@
-import { Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import Favorites from "./pages/Favorites";
+import { Outlet } from "react-router-dom";
+import NavBar from "./components/Navbar";
+import styled from "styled-components";
 
 const App = () => {
   return (
-    <Routes>
-      <Route path="/" element={<Home />}></Route>
-      <Route path="favorites" element={<Favorites />}></Route>
-    </Routes>
+    <Container>
+      <NavBar />
+      <Outlet />
+    </Container>
   );
 };
 
 export default App;
+
+const Container = styled.div`
+  min-height: 100vh;
+  position: relative;
+  display: grid;
+  grid-template-rows: 64px auto;
+`;
