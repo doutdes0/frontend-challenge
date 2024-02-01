@@ -21,7 +21,9 @@ const Home: React.FC = () => {
   };
 
   useEffect(() => {
-    dispatch(getCats());
+    if (cats.length < 1) {
+      dispatch(getCats());
+    }
   }, [dispatch]);
 
   useEffect(() => {
