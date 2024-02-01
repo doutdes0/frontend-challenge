@@ -2,10 +2,12 @@ import styled from "styled-components";
 import LikeButton from "./LikeButton";
 
 interface Props {
+  id: string;
+  isLiked: boolean;
   url: string;
 }
 
-const Card: React.FC<Props> = ({ url }) => {
+const Card: React.FC<Props> = ({ url, isLiked, id }) => {
   return (
     <Container>
       <div className="scale">
@@ -13,7 +15,10 @@ const Card: React.FC<Props> = ({ url }) => {
           src={url}
           alt="cat"
         />
-        <LikeButton />
+        <LikeButton
+          id={id}
+          isLiked={isLiked}
+        />
       </div>
     </Container>
   );

@@ -24,11 +24,3 @@ input {
   font-weight: 400;
   letter-spacing: 0.25px;
 }
-
-/* @media only screen and (max-width: 768px) {
-  body {
-    overflow: initial;
-    overflow-y: auto;
-    max-height: none;
-  }
-} */

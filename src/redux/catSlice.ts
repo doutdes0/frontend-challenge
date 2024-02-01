@@ -39,3 +39,4 @@ const catsSlice = createSlice({
 });
 
 export default catsSlice.reducer;
+export const { toggle_like } = catsSlice.actions;
