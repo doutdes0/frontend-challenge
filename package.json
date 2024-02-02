@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://github.com/doutdes0/frontend-challenge",
+  "homepage": "https://doutdes0.github.io/frontend-challenge/",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",

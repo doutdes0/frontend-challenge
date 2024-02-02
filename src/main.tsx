@@ -7,16 +7,19 @@ import Home from "./components/Home.tsx";
 import Favorites from "./components/Favorites.tsx";
 import "./styles/index.css";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />,
-    children: [
-      { path: "/", element: <Home /> },
-      { path: "/favorites", element: <Favorites /> },
-    ],
-  },
-]);
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <App />,
+      children: [
+        { path: "/", element: <Home /> },
+        { path: "/favorites", element: <Favorites /> },
+      ],
+    },
+  ],
+  { basename: "/frontend-challenge" }
+);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <Provider store={store}>
