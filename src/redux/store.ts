@@ -1,15 +1,32 @@
-import { configureStore } from "@reduxjs/toolkit";
+import { configureStore, combineReducers } from "@reduxjs/toolkit";
 import catsReducer from "./catSlice";
 
-export const store = configureStore({
-  reducer: {
-    cats: catsReducer,
-  },
-  middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware({
-      serializableCheck: false,
-    }),
+const rootReducer = combineReducers({
+  cats: catsReducer,
 });
 
-export type RootState = ReturnType<typeof store.getState>;
-export type AppDispatch = typeof store.dispatch;
+//Confiure store every time a test runs
+export const setUpStore = (preloadedState?: Partial<RootState>) => {
+  return configureStore({
+    reducer: rootReducer,
+    preloadedState,
+    middleware: (getDefaultMiddleware) =>
+      getDefaultMiddleware({
+        serializableCheck: false,
+      }),
+  });
+};
+
+export type RootState = ReturnType<typeof rootReducer>;
+export type AppStore = ReturnType<typeof setUpStore>;
+export type AppDispatch = AppStore["dispatch"];
+
+// export const store = configureStore({
+//   reducer: {
+//     cats: catsReducer,
+//   },
+//   middleware: (getDefaultMiddleware) =>
+//     getDefaultMiddleware({
+//       serializableCheck: false,
+//     }),
+// });
