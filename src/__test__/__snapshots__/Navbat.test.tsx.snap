@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar should match snapshot 1`] = `
+<div>
+  <div
+    class="sc-beySPh kqHCnd"
+  >
+    <div
+      class="link active"
+      data-link="/"
+    >
+      <a
+        aria-current="page"
+        class="active"
+        href="/"
+      >
+        Все котики
+      </a>
+    </div>
+    <div
+      class="link"
+      data-link="/favorites"
+    >
+      <a
+        class=""
+        href="/favorites"
+      >
+        Любимые котики
+      </a>
+    </div>
+  </div>
+</div>
+`;
